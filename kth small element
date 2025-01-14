@@ -1,0 +1,27 @@
+def kth_smallest(arr, k):
+    """
+    Finds the k'th smallest element in the given array using sorting.
+
+    Args:
+        arr: The input array.
+        k: The index of the smallest element to find (1-indexed).
+
+    Returns:
+        The k'th smallest element in the array.
+    """
+
+    # Sort the array in ascending order
+    arr.sort()
+
+    # Return the k-th element (k-1 due to 0-based indexing)
+    return arr[k - 1]
+
+# Get input from the user
+arr_str = input("Enter the array elements (separated by spaces): ")
+arr = list(map(int, arr_str.split()))
+
+k = int(input("Enter the value of k: "))
+
+# Find and print the k-th smallest element
+kth_smallest_element = kth_smallest(arr, k)
+print(f"The {k}-th smallest element is: {kth_smallest_element}")
