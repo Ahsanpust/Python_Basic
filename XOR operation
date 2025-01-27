@@ -1,0 +1,12 @@
+def findsingle(data):
+    result = 0
+    # Iterate over each element in the data
+    for i in data:
+        result ^= i  # XOR all elements
+    return result
+
+# Data declaration
+data = [2, 2, 3, 3, 4, 5, 4]
+
+# Find and print the unique number
+print("The unique number is:", findsingle(data))
